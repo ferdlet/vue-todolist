@@ -8,7 +8,7 @@
 /* Common */
 .container {
 	max-width: 1080px;
-	margin: auto;
+	margin: 0 auto;
 }
 body {
 	font-family: 'Nunito Sans', sans-serif;
