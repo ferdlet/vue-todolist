@@ -7,7 +7,7 @@ const app = new Vue({
 	},
 	methods: {
 		addItem: function() {
-			if( this.inputValue !== "" ) {
+			if (this.inputValue !== "") {
 				this.items.push({
 					todo: this.inputValue, 
 					check: false
@@ -17,6 +17,6 @@ const app = new Vue({
 		},
 		removeItem: function(index) {
 			this.items.splice(index, 1);
-		}
+		},
 	}
 });
