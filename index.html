@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Vue To Do List</title>
+		<!-- Fontawesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- /Fontawesome -->
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<!-- /Google Fonts -->
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<div id="root">
+
+			<header>
+				<div class="container">
+					<img class="logo" src="https://to-do-cdn.microsoft.com/static-assets/c87265a87f887380a04cf21925a56539b29364b51ae53e089c3ee2b2180148c6/icons/logo.png" alt="Logo">
+					<img class="logo"
+						src="http://cit336.malorieaaron.com/public/images/to_do_list_logo.png"
+						alt="Logo text">
+					
+					<h1>Todo List</h1>
+				</div>
+			</header>
+
+			<main>
+				<div class="container">
+					<div class="add-item">
+						<input type="text" placeholder="Inserisci un elemento da aggiungere" v-model="inputValue" @keyup.enter="addItem()">
+						<button @click="addItem()">Aggiungi</button>
+					</div>
+					<div class="items">
+						<ul v-if="items.length > 0">
+							<li v-for="(item, index) in items">
+								<div>
+									<input type="checkbox" value=false v-model="item.check">
+									<span :class="item.check == true ? 'fatto' : ''" @click="item.check == true ? item.check = false : item.check = true">{{item.todo}}</span>
+								</div>
+								<i class="fas fa-times" @click="removeItem(index)"></i>
+							</li>
+						</ul>
+						<h2 v-else>La lista è vuota!</h2>
+					</div>
+				</div>
+			</main>
+
+			<footer>
+
+			</footer>
+
+		</div>
+
+		<!-- development version, includes helpful console warnings -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
