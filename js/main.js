@@ -3,7 +3,6 @@ const app = new Vue({
 	data: {
 		items: [],
 		inputValue: '',
-		isActive: true
 	},
 	methods: {
 		addItem: function() {
