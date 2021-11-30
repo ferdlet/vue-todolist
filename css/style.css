@@ -14,15 +14,15 @@ body {
 	font-family: 'Nunito Sans', sans-serif;
 }
 
-/* Typo */
-h1 {
-	font-size: 45px;
-}
 
 /* Header */
 header {
 	text-align: center;
 	padding: 20px 0;
+}
+
+h1 {
+	font-size: 45px;
 }
 
 .logo {

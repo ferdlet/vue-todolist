@@ -2,7 +2,7 @@ const app = new Vue({
 	el: '#root',
 	data: {
 		items: [],
-		inputValue: '',
+		inputValue: ''
 	},
 	methods: {
 		addItem: function() {
